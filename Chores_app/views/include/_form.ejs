@@ -1,0 +1,55 @@
+<!--forms-->
+<form action="api/tasks" method="POST" id="add_task">
+    <div class="new_task">
+        <div class="form-group">
+            <label for="task" class="text-light">Task</label>
+            <input type="hidden" name="id" value="">
+            <input type="text" name="task" value="" placeholder="i.e. Do Laundry Rotation">
+        </div>
+
+        <!--Difficulty slider-->
+        <!-- <div class="form-group">
+            <label for="customRange0" class="form-header">Difficulty:</label>
+            <label for="customRange0" class="form-label" id="text-light">Easy</label>
+            <input type="range" class="form-range" min="0" max="5" id="customRange0">
+            <label for="customRange0" class="form-label">Hard</label> -->
+        <!--end Difficulty Slider-->
+            <label for="difficulty" class="text-light">Difficulty</label>
+            <div class="radio inline">
+                <input type="radio" id="radio-2" name="difficulty" value="1">
+                <label for="radio-2" class="radio-label">1</label>
+            </div>
+            <div class="radio inline">
+                <input type="radio" id="radio-3" name="difficulty" value="2">
+                <label for="radio-3" class="radio-label">2</label>
+            </div>
+            <div class="radio inline">
+                <input type="radio" id="radio-4" name="difficulty" value="3">
+                <label for="radio-4" class="radio-label">3</label>
+            </div>
+            <div class="radio inline">
+                <input type="radio" id="radio-5" name="difficulty" value="4">
+                <label for="radio-5" class="radio-label">4</label>
+            </div>
+            <div class="radio inline">
+                <input type="radio" id="radio-6" name="difficulty" value="5">
+                <label for="radio-6" class="radio-label">5</label>
+            </div>
+        </div>
+        <!-- New Task shouldn't need to show in new task form.  If adding task...it wouldn't be finished.
+    <div class="form-group">
+        <label for="radio" class="text-light">Status</label>
+        <div class="radio inline">
+            <input type="radio" id="radio-7" name="status" value="Active">
+            <label for="radio-7" class="radio-label">Finished</label>
+        </div>
+        <div class="radio inline">
+            <input type="radio" id="radio-8" name="status" value="Inactive">
+            <label for="radio-8" class="radio-label">Unfinished</label>
+        </div> -->
+    </div>
+    <div class="form-group-button">
+        <button type="submit" class="btn text-dark update">Save</button>
+    </div> 
+</div>
+</form>

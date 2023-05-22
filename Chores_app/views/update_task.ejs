@@ -1,0 +1,68 @@
+<!--include header-->
+<%-include('include/_header')%>
+<!--include header-->
+
+ <!--Main Site-->
+ <main id="site-main">
+    <div class="container">
+        <div class="box-nav d-flex justify-between">
+            <div class="filter">
+                <a href="/"><i class="fas fa-angle-double-left"></i>All Tasks</a>
+            </div>
+        </div>
+        <div class="form-title text-center">
+            <h2 class="text-dark">Update Task</h2>
+            <span class="text-light">Use the below form to update a task</span>
+        </div>
+        
+<!--add task form-->
+<!--forms-->
+<form method="POST" id="update_task">
+    <div class="new_task">
+        <div class="form-group">
+            <label for="task" class="text-light form-header">Task</label>
+            <input type="hidden" name="id" value="<%= task._id %>">
+            <input type="text" name="task" value="<%= task.task %>" placeholder="i.e. Do Laundry Rotation">
+        </div>
+        <!-- <div class="form-group">
+            <label for="email" class="text-light">E-mail</label>
+            <input type="hidden" name="id" value="">
+            <input type="text" name="email" value="<%=task.email%>" placeholder="example@gmail.com">
+        </div> -->
+        <div class="form-group">
+            <label for="difficulty" class="text-light">Difficulty</label>
+            <div class="radio inline">
+                <input type="radio" id="radio-2" name="difficulty" value="1" <%= task.difficulty == '1' ? 'checked' : '' %>>
+                <label for="radio-2" class="radio-label">1</label>
+            </div>
+            <div class="radio inline">
+                <input type="radio" id="radio-3" name="difficulty" value="2" <%= task.difficulty == '2' ? 'checked' : '' %>>
+                <label for="radio-3" class="radio-label">2</label>
+            </div>
+            <div class="radio inline">
+                <input type="radio" id="radio-4" name="difficulty" value="3"<%= task.difficulty == '3' ? 'checked' : '' %>>
+                <label for="radio-4" class="radio-label">3</label>
+            </div>
+            <div class="radio inline">
+                <input type="radio" id="radio-5" name="difficulty" value="4"<%= task.difficulty == '4' ? 'checked' : '' %>>
+                <label for="radio-5" class="radio-label">4</label>
+            </div>
+            <div class="radio inline">
+                <input type="radio" id="radio-6" name="difficulty" value="5"<%= task.difficulty == '5' ? 'checked' : '' %>>
+                <label for="radio-6" class="radio-label">5</label>
+            </div>
+        </div>
+    <div class="form-group">
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn text-dark update">Save</button>
+    </div> 
+</div>
+</form>
+    </div>
+</main>
+<!--Main Site-->
+
+<!--include footer-->
+<%-include('include/_footer')%>
+<!--include footer-->

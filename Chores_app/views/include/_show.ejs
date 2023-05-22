@@ -1,0 +1,17 @@
+<%for(var i=0; i<tasks.length; i++) {%>
+<tr>
+    <td class="roll-<%=i + 1%>"><%=i + 1%></td>
+    <td><%=tasks[i].task%></td>
+    <td id="difficulty"><%=tasks[i].difficulty%></td>
+    <td>
+        <a href="/update-task?id=<%= tasks[i]._id%>" class="btn border-shadow update">
+            <span class="text-gradient"><i class="fas fa-pencil-alt"></i></span>
+        </a>
+        <a class="btn border-shadow delete" data-id=<%=tasks[i]._id%> >
+            <span class="text-gradient"><i class="fas fa-times"></i></span>
+        </a>
+        <a class="btn border-shadow check"> 
+        </a>
+    </td>
+</tr>
+<% } %>
