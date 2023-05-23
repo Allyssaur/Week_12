@@ -1,5 +1,4 @@
 $("#add_task").submit(function(_event){
-    getStarValue();
     alert("Data Inserted Successfully!");
 })
 
